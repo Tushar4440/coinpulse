@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="greenGlow" x1="0" y1="0" x2="600" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16a34a"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Circular pulse emblem -->
+  <circle cx="100" cy="100" r="60" stroke="url(#greenGlow)" stroke-width="8" fill="none"/>
+  <path d="M 60 100 C 70 100, 80 80, 90 60 C 100 40, 110 80, 120 100 C 130 120, 140 100, 160 100"
+        fill="none"
+        stroke="url(#greenGlow)"
+        stroke-width="8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        filter="url(#softGlow)"
+  />
+
+  <!-- Coinpulse text -->
+  <text x="200" y="120" font-family="Orbitron, sans-serif" font-size="60" fill="url(#greenGlow)" font-weight="bold">
+    COIN
+  </text>
+  <text x="380" y="120" 
+      font-family="Arial, sans-serif" 
+      font-size="60" 
+      fill="url(#greenGlow)" 
+      font-weight="bold" 
+      transform="skewX(-15)">
+  PULSE
+</text>
+
+</svg>
